@@ -1,0 +1,17 @@
+{
+  "name": "vanillajs-spa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "keywords": [],
+  "author": "Francesco Lombardo <frawolf@outlook.it> (https://frawolf.dev)",
+  "license": "ISC",
+  "devDependencies": {
+    "vite": "^2.8.6"
+  }
+}
