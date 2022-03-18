@@ -85,53 +85,6 @@ export class Engine {
     });
   }
 
-  // DragListener() {
-  //   window.addEventListener("dragstart", (event) => {
-  //     event.dataTransfer.setData("itemDraggedId", event.target.id);
-  //   });
-
-  //   window.addEventListener("dragover", (event) => {
-  //     console.log(event.target.classList.contains("drop"));
-
-  //     if (event.target.classList.contains("drop")) {
-  //       event.preventDefault();
-
-  //       document
-  //         .getElementById(event.target.id)
-  //         .classList.add(["border"], ["border-success"]);
-  //     }
-  //   });
-
-  //   window.addEventListener("dragleave", (event) => {
-  //     if (event.target.classList.contains("drop")) {
-  //       event.preventDefault();
-
-  //       document
-  //         .getElementById(event.target.id)
-  //         .classList.remove(["border"], ["border-success"]);
-  //     }
-  //   });
-
-  //   window.addEventListener("drop", (event) => {
-  //     if (event.target.classList.contains("drop")) {
-  //       event.preventDefault();
-
-  //       const draggedId = event.dataTransfer.getData("itemDraggedId");
-  //       const dropId = event.target.id;
-
-  //       if (draggedId && dropId && draggedId !== dropId) {
-  //         console.log("DraggedId", draggedId);
-  //         console.log("DropId", dropId);
-
-  //         document
-  //           .getElementById(dropId)
-  //           .classList.remove(["border"], ["border-success"]);
-  //         document.getElementById(draggedId).remove();
-  //       }
-  //     }
-  //   });
-  // }
-
   UploadFile(event) {
     if (!file.value.length) return;
 
@@ -199,13 +152,7 @@ export class Engine {
         .then((res) => res.json())
         .then((res) => {
           this.EndLoading("#homeLoadingSpinner");
-          // const allFiles = res.files.map((item) => {
-          //   return fileTemplate(item);
-          // });
-
           this.RenderFiles(res.files);
-
-          // this.resultsContainer.innerHTML = allFiles;
         })
         .catch((e) => {
           this.EndLoading("#homeLoadingSpinner");
